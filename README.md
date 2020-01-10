@@ -16,10 +16,10 @@ Install
 **Using Module::Build**
 
 ```
-	perl Build.PL
-	./build installdeps
-	./build test
-	./build install
+perl Build.PL
+./build installdeps
+./build test
+./build install
 ```
 
 Usage
@@ -28,25 +28,25 @@ Usage
 ###To convert your text to binary..
 
 ```
-	perl bin/text2bin 'string of text to convert'
+perl bin/text2bin 'string of text to convert'
 ```
 
 Or pipe data into stdin
 
 ```
-	echo -n 'string of text to convert' | bin/text2bin
+echo -n 'string of text to convert' | bin/text2bin
 ```
 
 ###To convert your binary back into text..
 
 ```
-	perl bin/bin2text '00101110101001100001111000101110'
+perl bin/bin2text '00101110101001100001111000101110'
 ```
 
 Or pipe data into stdin
 
 ```
-	echo -n '00101110101001100001111000101110' | bin/bin2text
+echo -n '00101110101001100001111000101110' | bin/bin2text
 ```
 
 Author
