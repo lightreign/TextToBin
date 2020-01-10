@@ -35,12 +35,12 @@ Class constructor
 =cut
 
 sub new {
-	my $class = shift;
-	my $self = bless {}, $class;
+    my $class = shift;
+    my $self = bless {}, $class;
 
-	$self->set_template();
+    $self->set_template();
 
-	return $self;
+    return $self;
 }
 
 =head1 METHOD
@@ -50,15 +50,15 @@ Detects system endian-ness and sets appropriate pack template
 =cut
 
 sub set_template {
-	my $self = shift;
+    my $self = shift;
 
-	# Detect endian-ness and set pack template
-	# Byteorders "1234" and "12345678" are little-endian; "4321" and "87654321" are big-endian
-	if ($Config{'byteorder'} eq '1234' || $Config{'byteorder'} eq '12345678') {
-		$self->{'template'} = 'b*';
-	} else {
-		$self->{'template'} = 'B*';
-	}
+    # Detect endian-ness and set pack template
+    # Byteorders "1234" and "12345678" are little-endian; "4321" and "87654321" are big-endian
+    if ($Config{'byteorder'} eq '1234' || $Config{'byteorder'} eq '12345678') {
+        $self->{'template'} = 'b*';
+    } else {
+        $self->{'template'} = 'B*';
+    }
 }
 
 =head1 METHOD
@@ -68,9 +68,9 @@ Converts ASCII text to binary string
 =cut
 
 sub to_binary {
-	my ($self, $text) = @_;
+    my ($self, $text) = @_;
 
-	return unpack($self->{'template'}, $text);
+    return unpack($self->{'template'}, $text);
 }
 
 =head1 METHOD
@@ -80,9 +80,9 @@ Converts binary string to ASCII character text
 =cut
 
 sub from_binary {
-	my ($self, $bits) = @_;
+    my ($self, $bits) = @_;
 
-	return pack($self->{'template'}, $bits);
+    return pack($self->{'template'}, $bits);
 }
 
 1;
