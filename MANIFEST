@@ -1,0 +1,7 @@
+bin/bin2text
+bin/text2bin
+Build.PL
+cpanfile
+lib/Text/ConvertBinary.pm
+MANIFEST			This list of files
+README.md

@@ -1,0 +1,50 @@
+<h1>Text to Binary</h1>
+
+<p>A demo script for fun</p>
+
+<p>You can either run it as it is or install it onto your system (if you are keen that is)</p>
+
+<h2>Requirements</h2>
+
+<p>Perl 5.x</p>
+
+<h2>Install</h2>
+
+<p><strong>Using Module::Build</strong></p>
+
+<p><code>
+    perl Build.PL
+    ./build installdeps
+    ./build test
+    ./build install
+</code></p>
+
+<h2>Usage</h2>
+
+<h3>To convert your text to binary..</h3>
+
+<p><code>
+    perl bin/text2bin 'string of text to convert'
+</code></p>
+
+<p>Or pipe data into stdin</p>
+
+<p><code>
+    echo -n 'string of text to convert' | bin/text2bin
+</code></p>
+
+<h3>To convert your binary back into text..</h3>
+
+<p><code>
+    perl bin/bin2text '00101110101001100001111000101110'
+</code></p>
+
+<p>Or pipe data into stdin</p>
+
+<p><code>
+    echo -n '00101110101001100001111000101110' | bin/bin2text
+</code></p>
+
+<h2>Author</h2>
+
+<p>Adrian Pennington</p>
