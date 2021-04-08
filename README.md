@@ -25,7 +25,7 @@ perl Build.PL
 Usage
 -----
 
-###To convert your text to binary..
+### To convert your text to binary..
 
 ```
 perl bin/text2bin 'string of text to convert'
@@ -37,7 +37,7 @@ Or pipe data into stdin
 echo -n 'string of text to convert' | bin/text2bin
 ```
 
-###To convert your binary back into text..
+### To convert your binary back into text..
 
 ```
 perl bin/bin2text '00101110101001100001111000101110'
